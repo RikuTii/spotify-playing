@@ -19,7 +19,6 @@ export async function redirectToAuthCodeFlow(clientId: string) {
 
 const tokenRenewer = (clientId: string, timeout: number) => {
     refeshAccessToken(clientId);
-    console.log('renewing token');
     setTimeout(() => {
         tokenRenewer(clientId, timeout);
     }, timeout);
@@ -43,8 +42,6 @@ export async function getAccessToken(clientId: string, code: string) {
 
     const data = await result.json();
     const { access_token, refresh_token, expires_in } = data;
-
-    console.log(data);
     const timeoutLength = (expires_in * 1000) - 2000;
     setTimeout(() => {
         tokenRenewer(clientId, timeoutLength);
@@ -69,7 +66,6 @@ export async function refeshAccessToken(clientId: string) {
 
     const data = await result.json();
     const { access_token, refresh_token } = data;
-    console.log('new token', data);
 
     if(access_token && refresh_token) {
         localStorage.setItem('access_token', access_token);
