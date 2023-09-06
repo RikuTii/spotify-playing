@@ -2,6 +2,8 @@
 
 Show currently playing song from Spotify. Built with [Electron](https://github.com/electron/electron) using [React](https://github.com/electron-react-boilerplate/electron-react-boilerplate) boilerplate and using [Spotify](https://developer.spotify.com/documentation/web-api) Web API.
 
+![Player](https://i.imgur.com/Smj0YNI.png)
+
 ## Features
 - Show current artist, track and song progress
 - Draggable window with minimal toolbar
