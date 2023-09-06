@@ -1,0 +1,76 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+body {
+  position: relative;
+  color: white;
+  height: 100vh;
+  background: rgb(8,8,18);
+  background: linear-gradient(338deg, rgba(8,8,18,1) 0%, rgba(7,7,18,1) 47%, rgba(79,92,94,1) 100%);
+  font-family: sans-serif;
+  overflow-y: hidden;
+  display: flex;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+p {
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+.album-cover {
+  border-radius: 8px;
+}
+.track-title {
+font-weight: 700;
+}
+.track-artist {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(200,200,200);
+}
+
+.track-progress {
+  display: flex;
+  background-color: rgb(30,30,30);
+  height: 8px;
+  width: 200px;
+  align-items:center;
+  border-radius: 1rem;
+}
+
+.track-progress > div {
+  display: flex;
+  background: rgb(240,240,240, 0.6);
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.track-time {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(200,200,200);
+  margin-left: 0.5rem;
+}
+
+.nothing-container {
+  display: flex;
+  align-items: center;
+  width: 98vw;
+  height: 100vh;
+  justify-content: center;
+}
